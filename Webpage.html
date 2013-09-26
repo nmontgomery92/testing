@@ -1,0 +1,55 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery UI Tabs - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <!--<link rel="stylesheet" href="/resources/demos/style.css" /> -->
+   <style>
+   body { background: blue}
+    #tabs-1 { width: 500px; height: 200px; position: relative; }
+    #tabs-2 { padding: .5em 1em; text-decoration: none; }
+    #tabs-3 {  width: 90%; height: 200px;  padding: 1em;  font-size: 1.2em; border: 1px solid #000; background: red; color: #333; }
+    .newClass { color: yellow; background: blue; }
+	#tabs { width: 50%; margin-left: auto; margin-right: auto; margin-top: 10px;}
+  </style>
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  $(function() {
+   $( "#btn" ).click(function(){
+   $( "#tabs-3" ).toggleClass( "newClass", 100);
+   //$( "#effect" ).toggleClass( "newClass", 100);
+   });
+  });
+  </script>
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Use tab1</a></li>
+    <li><a href="#tabs-2">Use tab2</a></li>
+    <li><a href="#tabs-3">Use tab3</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>This is testing paragraph for tab 1</p>
+  </div>
+  <div id="tabs-2">
+    <p> this is test paragraph for tab 2</p>
+  </div>
+  <div id="tabs-3">
+    <p> This is testing for tab 3</p>
+	<input id = "btn" type = "button" value = "Click to add class">Click to add class</input>
+	<div id = "effect">hello</div>
+    <p></p>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>
